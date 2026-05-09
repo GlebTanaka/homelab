@@ -29,9 +29,21 @@ This repository documents my personal homelab setup and learning journey.
 - [x] Ubuntu Server installed
 - [x] Static IP configured
 - [x] SSH access working
-- [ ] Kubernetes cluster (k3s)
+- [x] Kubernetes cluster (`k3s`)
 - [ ] First deployment
+
+## Roadmap
+
+1. [x] Static networking
+2. [x] SSH
+3. [x] `k3s` cluster
+4. [ ] NodePort exposure
+5. [ ] Ingress with Traefik
+6. [ ] Scale deployments
+7. [ ] More realistic apps (maybe `n8n` later)
+8. [ ] Monitoring / GitOps / TLS later
 
 ## Notes
 
-See `/notes` for detailed steps and learnings.
+See the `notes/` directory for detailed setup steps and learnings.
+Internal maintainer context is stored in `AGENT_CONTEXT.md`.
