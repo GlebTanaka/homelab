@@ -23,3 +23,14 @@
 - Expected result: the main node appears in the list and shows `Ready`
 - Ran `sudo kubectl get pods -A`
 - Expected result: system pods in the `kube-system` namespace are running
+
+## NodePort Exposure
+- Exposed the NGINX service through a NodePort named `hello-nginx-nodeport`
+- Verified the service with `kubectl get svc`
+- Confirmed that `hello-nginx-nodeport` is listed as `NodePort`
+- Confirmed that the service exposes port `80:31408/TCP`
+
+## Browser Verification
+- Checked the exposed NGINX service in a browser
+- Confirmed that it is reachable from `imac1`
+- Confirmed that it is reachable from `imac2`

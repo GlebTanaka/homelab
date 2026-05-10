@@ -30,14 +30,15 @@ This repository documents my personal homelab setup and learning journey.
 - [x] Static IP configured
 - [x] SSH access working
 - [x] Kubernetes cluster (`k3s`)
-- [ ] First deployment
+- [x] NodePort exposure
+- [x] First deployment
 
 ## Roadmap
 
 1. [x] Static networking
 2. [x] SSH
 3. [x] `k3s` cluster
-4. [ ] NodePort exposure
+4. [x] NodePort exposure
 5. [ ] Ingress with Traefik
 6. [ ] Scale deployments
 7. [ ] More realistic apps (maybe `n8n` later)

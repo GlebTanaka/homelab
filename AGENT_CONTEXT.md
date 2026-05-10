@@ -16,6 +16,7 @@ This file is a lightweight reference for future documentation updates in this re
 - Static networking configured
 - SSH access confirmed
 - First `k3s` cluster established
+- First NodePort service exposed with `hello-nginx-nodeport`
 - Cluster verification completed with:
   - `sudo kubectl get nodes`
   - `sudo kubectl get pods -A`
@@ -23,12 +24,14 @@ This file is a lightweight reference for future documentation updates in this re
 ## Verified Outcome
 - The main node appears in the node list and shows `Ready`
 - System pods in `kube-system` are running
+- `hello-nginx-nodeport` is exposed as a `NodePort` service on `80:31408/TCP`
+- The exposed NGINX service is reachable in a browser from `imac1` and `imac2`
 
 ## Rough Roadmap
 1. Completed: Static networking
 2. Completed: SSH
 3. Completed: `k3s` cluster
-4. Next: NodePort exposure
+4. Completed: NodePort exposure
 5. Later: Ingress with Traefik
 6. Later: Scale deployments
 7. Later: More realistic apps, possibly `n8n`
