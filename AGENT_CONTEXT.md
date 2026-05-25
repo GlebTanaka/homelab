@@ -17,6 +17,7 @@ This file is a lightweight reference for future documentation updates in this re
 - SSH access confirmed
 - First `k3s` cluster established
 - First NodePort service exposed with `hello-nginx-nodeport`
+- Remote `kubectl` access works from both `imac1` and `imac2`
 - Cluster verification completed with:
   - `sudo kubectl get nodes`
   - `sudo kubectl get pods -A`
@@ -40,6 +41,11 @@ This file is a lightweight reference for future documentation updates in this re
 ## Documentation Map
 - `README.md`: high-level overview, current status, roadmap
 - `notes/setup.md`: setup steps and cluster verification notes
+
+## Operational Notes
+- SSH aliases `imac1` and `imac2` are available from the local machine
+- `kubectl` works remotely on both nodes through `~/.kube/config`
+- On worker nodes, copied kubeconfig files must point to the control-plane IP rather than `127.0.0.1`
 
 ## Documentation Style
 - Keep notes chronological and practical
