@@ -41,3 +41,47 @@
 - `KUBECONFIG` is optional when the kubeconfig is stored at the default path
 - When copying the kubeconfig from `imac1` to `imac2`, the API server address must be changed from `https://127.0.0.1:6443` to `https://192.168.178.86:6443`
 - The alias `k='kubectl'` is optional and only improves shell convenience
+
+## Practice Checklist
+
+### SSH Access
+```bash
+ssh imac1
+ssh imac2
+hostname
+```
+
+### Cluster Checks
+```bash
+kubectl get nodes
+kubectl get pods -A
+kubectl get svc
+```
+
+### NGINX Service Checks
+```bash
+kubectl get svc hello-nginx
+kubectl get svc hello-nginx-nodeport
+kubectl describe svc hello-nginx-nodeport
+```
+
+### Deployment Checks
+```bash
+kubectl get deployments
+kubectl get pods
+kubectl describe deployment hello-nginx
+```
+
+### Traefik Checks
+```bash
+kubectl get pods -n kube-system -l app.kubernetes.io/name=traefik
+kubectl get svc -n kube-system
+kubectl get ingressclass
+```
+
+### kubeconfig Checks
+```bash
+echo $KUBECONFIG
+ls -l ~/.kube/config
+kubectl config view --minify
+```
